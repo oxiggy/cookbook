@@ -9,17 +9,17 @@ const CookingStep = () => {
   const haveList = false;
 
   return (
-    <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column', gap: '24px', maxWidth: 400, margin: '0 auto' }}>
-      <Box sx={{ position: 'relative', minHeight: 60 }}>
+    <Box style={{ height: '100%', display: 'flex', flexDirection: 'column', gap: '24px', maxWidth: 400, margin: '0 auto' }}>
+      <Box style={{ position: 'relative', minHeight: 60 }}>
         <Box
           component={NavLink}
           to='/recipes'
-          sx={{
+          style={{
             position: 'absolute',
             top: 0, left: 30,
             height: '60px',
             width: '60px',
-            backgroundColor: 'grey',
+            backgroundColor: 'var(--mantine-color-tertiary-0)',
             borderRadius: '0 0 4px 4px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'
         }}
@@ -57,10 +57,8 @@ const CookingStep = () => {
     </Stack>
       <Box
         bg='primary.0'
-        //c='tertiary.0'
-        sx={{
+        style={{
           marginTop: 'auto',
-          //backgroundColor: 'black',
           color: 'white',
           borderRadius: '8px 8px 0 0',
           padding: '8px',

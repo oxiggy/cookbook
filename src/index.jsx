@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 //styles
 import { MantineProvider } from '@mantine/core';
+import "@mantine/core/styles.css";
 import { theme } from '@/theme';
 import './index.css';
 //Local files
@@ -35,7 +36,7 @@ const router = createHashRouter([
 ])
 
 root.render(
-  <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+  <MantineProvider theme={theme}>
     <RouterProvider router={router} />
   </MantineProvider>
 );

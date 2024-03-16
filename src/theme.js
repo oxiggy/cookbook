@@ -1,5 +1,6 @@
-export const theme = {
-  //colorScheme: 'dark',
+import { createTheme } from '@mantine/core';
+
+export const theme = createTheme({
   primaryColor:  'teal',
   colors: {
     primary: [ '#0F0E37' ],
@@ -21,4 +22,4 @@ export const theme = {
       }
     }
   }
-}
+});

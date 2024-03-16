@@ -1,12 +1,13 @@
-const { default: react } = require('@vitejs/plugin-react')
-const svgr = require('vite-plugin-svgr')
-const path = require('path')
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+import svgr from 'vite-plugin-svgr'
+import path from 'node:path'
 
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config()
-}
+//if (process.env.NODE_ENV !== 'production') {
+//    require('dotenv').config()
+//}
 
-module.exports = {
+export default defineConfig({
     plugins: [react(), svgr()],
     resolve: {
         alias: {
@@ -29,4 +30,5 @@ module.exports = {
     preview: {
         port: 3000,
     }
-}
+})
+
