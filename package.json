@@ -6,7 +6,9 @@
   "scripts": {
     "build": "vite build --emptyOutDir",
     "start": "vite",
-    "start:preview": "vite preview"
+    "start:preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@mantine/core": "^7.6.2",
@@ -24,6 +26,7 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.1",
     "vite": "^5.1.6",
     "vite-plugin-svgr": "^4.2.0"
   }
